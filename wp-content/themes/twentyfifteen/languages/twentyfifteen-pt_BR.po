@@ -24,6 +24,9 @@ msgstr "Twenty Fifteen"
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Deixe um comentário <span class=\"screen-reader-text\"> em %s</span>"
 
+msgid "Leave a comment"
+msgstr "Deixe um comentário"
+
 #: single.php:37
 msgid "Previous post:"
 msgstr "Post anterior:"
