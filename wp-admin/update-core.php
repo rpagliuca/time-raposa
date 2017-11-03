@@ -240,6 +240,8 @@ function list_plugin_updates() {
 	<tbody class="plugins">
 <?php
 	foreach ( (array) $plugins as $plugin_file => $plugin_data) {
+		$plugin_data = (object) _get_plugin_data_markup_translate( $plugin_file, (array) $plugin_data, false, true );
+
 		$info = plugins_api('plugin_information', array('slug' => $plugin_data->update->slug ));
 		if ( is_wp_error( $info ) ) {
 			$info = false;
@@ -390,14 +392,14 @@ function do_core_upgrade( $reinstall = false ) {
 	<h2><?php _e('Update WordPress'); ?></h2>
 <?php
 
-	if ( false === ( $credentials = request_filesystem_credentials( $url, '', false, ABSPATH, array(), $allow_relaxed_file_ownership ) ) ) {
+	if ( false === ( $credentials = request_filesystem_credentials( $url, '', false, ABSPATH, array( 'version', 'locale' ), $allow_relaxed_file_ownership ) ) ) {
 		echo '</div>';
 		return;
 	}
 
 	if ( ! WP_Filesystem( $credentials, ABSPATH, $allow_relaxed_file_ownership ) ) {
 		// Failed to connect, Error and request again
-		request_filesystem_credentials( $url, '', true, ABSPATH, array(), $allow_relaxed_file_ownership );
+		request_filesystem_credentials( $url, '', true, ABSPATH, array( 'version', 'locale' ), $allow_relaxed_file_ownership );
 		echo '</div>';
 		return;
 	}
