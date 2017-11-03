@@ -81,6 +81,7 @@ define('WP_DEBUG', false);
  */
 define('DISALLOW_FILE_EDIT', true );
 define('DISALLOW_FILE_MODS', true );
+define('WPLANG', 'pt_BR');
 
 /* That's all, stop editing! Happy blogging. */
 
