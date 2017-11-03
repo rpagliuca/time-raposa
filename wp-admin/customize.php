@@ -18,11 +18,9 @@ if ( ! current_user_can( 'customize' ) ) {
 
 wp_reset_vars( array( 'url', 'return' ) );
 $url = wp_unslash( $url );
-$url = esc_url_raw( $url );
 $url = wp_validate_redirect( $url, home_url( '/' ) );
 if ( $return ) {
 	$return = wp_unslash( $return );
-	$return = esc_url_raw( $return );
 	$return = wp_validate_redirect( $return );
 }
 if ( ! $return ) {
@@ -149,7 +147,7 @@ do_action( 'customize_controls_print_scripts' );
 							echo sprintf( __( 'You are previewing %s' ), '<strong class="theme-name">' . $wp_customize->theme()->display('Name') . '</strong>' );
 						} else {
 							/* translators: %s is the site/panel title in the Customize pane */
-							echo sprintf( __( 'You are customizing %s' ), '<strong class="theme-name site-title">' . get_bloginfo( 'name', 'display' ) . '</strong>' );
+							echo sprintf( __( 'You are customizing %s' ), '<strong class="theme-name site-title">' . get_bloginfo( 'name' ) . '</strong>' );
 						}
 					?></span>
 				</div>
