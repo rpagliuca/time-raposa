@@ -14,11 +14,11 @@ msgstr ""
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oops! Página não encontrada."
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
+msgstr "Parece que não existe nada aqui. Que tal tentar fazer uma busca?"
 
 #: archive.php:49 index.php:46 search.php:38
 msgid "Previous page"
@@ -26,20 +26,20 @@ msgstr "Página anterior"
 
 #: archive.php:50 index.php:47 search.php:39
 msgid "Next page"
-msgstr ""
+msgstr "Próxima página"
 
 #: archive.php:51 content-link.php:40 content-page.php:29 content.php:42
 #: image.php:63 index.php:48 search.php:40
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #: author-bio.php:12
 msgid "Published by"
-msgstr ""
+msgstr "Publicado por"
 
 #: author-bio.php:34
 msgid "View all posts by %s"
-msgstr ""
+msgstr "Ver todos os posts de %s"
 
 #: comments.php:28
 msgctxt "comments title"
@@ -50,25 +50,25 @@ msgstr[1] ""
 
 #: comments.php:53
 msgid "Comments are closed."
-msgstr ""
+msgstr "Comentários estão encerrados."
 
 #. translators: %s: Name of current post
 #: content-link.php:31 content.php:33 inc/template-tags.php:237
 msgid "Continue reading %s"
-msgstr ""
+msgstr "Continuar lendo %s"
 
 #: content-link.php:36 content-page.php:25 content.php:38 image.php:59
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: content-link.php:56 content-page.php:35 content-search.php:28
 #: content-search.php:33 content.php:57 image.php:71
 msgid "Edit"
-msgstr ""
+msgstr "Alterar"
 
 #: content-none.php:15
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nada Encontrado"
 
 #: content-none.php:22
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "Desculpe, mas nada foi encontrado. Por favor tente novamente utilizando outras palavras."
 
 #: content-none.php:31
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: footer.php:25
 msgid "Proudly powered by %s"
-msgstr ""
+msgstr "Orgulhosamente criado com %s"
 
 #: functions.php:85
 msgid "Primary Menu"
@@ -175,6 +175,8 @@ msgid ""
 "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
 "%title</span>"
 msgstr ""
+"<span class=\"meta-nav\">Publicado em</span><span class=\"post-title\">"
+"%title</span>"
 
 #: inc/back-compat.php:37 inc/back-compat.php:47 inc/back-compat.php:60
 msgid ""
@@ -224,19 +226,19 @@ msgstr ""
 
 #: inc/template-tags.php:23
 msgid "Comment navigation"
-msgstr ""
+msgstr "Explorar comentários"
 
 #: inc/template-tags.php:26
 msgid "Older Comments"
-msgstr ""
+msgstr "Comentários Mais Antigos"
 
 #: inc/template-tags.php:30
 msgid "Newer Comments"
-msgstr ""
+msgstr "Comentários Mais Novos"
 
 #: inc/template-tags.php:49
 msgid "Featured"
-msgstr ""
+msgstr "Em Destaque"
 
 #: inc/template-tags.php:55
 msgctxt "Used before post format."
@@ -246,12 +248,12 @@ msgstr ""
 #: inc/template-tags.php:76
 msgctxt "Used before publish date."
 msgid "Posted on"
-msgstr ""
+msgstr "Publicado em"
 
 #: inc/template-tags.php:85
 msgctxt "Used before post author name."
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: inc/template-tags.php:91 inc/template-tags.php:99
 msgctxt "Used between list items, there is a space after the comma."
@@ -261,12 +263,12 @@ msgstr ""
 #: inc/template-tags.php:94
 msgctxt "Used before category names."
 msgid "Categories"
-msgstr ""
+msgstr "Categorias"
 
 #: inc/template-tags.php:102
 msgctxt "Used before tag names."
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: inc/template-tags.php:113
 msgctxt "Used before full size attachment link."
@@ -287,7 +289,7 @@ msgstr "% Comentários"
 
 #: search.php:18
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultados para: %s"
 
 #: single.php:33
 msgid "Next"
