@@ -1,4 +1,4 @@
-# Blog TimeRaposa [![Build Status](https://www.travis-ci.org/rpagliuca/timeraposa.svg?branch=master)](https://www.travis-ci.org/rpagliuca/timeraposa.svg?branch=master)
+# Blog TimeRaposa [![Build Status](https://www.travis-ci.org/rpagliuca/timeraposa.svg?branch=master)](https://www.travis-ci.org/rpagliuca/timeraposa/branches)
 (forked from Wordpress Heroku -- see below!)
 
 # WordPress Heroku
