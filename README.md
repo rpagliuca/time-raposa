@@ -1,3 +1,6 @@
+# Blog TimeRaposa [![Build Status](https://www.travis-ci.org/rpagliuca/timeraposa.svg?branch=master)](https://www.travis-ci.org/rpagliuca/timeraposa.svg?branch=master)
+(forked from Wordpress Heroku -- see below!)
+
 # WordPress Heroku
 
 This project is a template for installing and running [WordPress](http://wordpress.org/) on [Heroku](http://www.heroku.com/). The repository comes bundled with:
