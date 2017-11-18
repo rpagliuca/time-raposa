@@ -1,0 +1,17 @@
+{
+    "name": "timeraposa/blog",
+    "type": "project",
+    "require-dev": {
+        "php": "^7",
+        "phpunit/phpunit": "^6.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael Santos",
+            "email": "rafael.santos.193@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable" : true
+}
