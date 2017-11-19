@@ -36,8 +36,6 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-var_dump([DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_CHARSET, DB_COLLATE]);
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
