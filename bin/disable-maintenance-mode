@@ -1,0 +1,5 @@
+# CD to script DIR
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+
+bash wp-cli plugin deactivate wp-maintenance-mode

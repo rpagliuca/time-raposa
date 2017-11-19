@@ -237,11 +237,11 @@ if (!class_exists('WP_Maintenance_Mode')) {
 
 			// create wpmm_subscribers table
 			$sql = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}wpmm_subscribers (
-                    `id_subscriber` bigint(20) NOT NULL AUTO_INCREMENT,
+                    `id_subscriber` bigint(20) NOT NULL auto_increment,
                     `email` varchar(50) NOT NULL,
                     `insert_date` datetime NOT NULL,
                     PRIMARY KEY (`id_subscriber`)
-                  ) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;";
+                  );";
 			require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 			dbDelta($sql);
 
