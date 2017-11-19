@@ -1,0 +1,1 @@
+export RAND="c139b0cca2581665a3558619cca3346d"; heroku config | grep -v === | awk -F: '{ st = index($0,":");print $1 "'$RAND'" substr($0,st+1)}' | sed "s/$RAND\s*/=/g" | sed 's/^/export /g'

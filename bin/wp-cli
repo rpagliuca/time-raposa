@@ -1,0 +1,6 @@
+# CD to script DIR
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+
+# wp-cli.phar should be in your PATH
+$(bash export_heroku_configs) && wp-cli.phar --path=../src/wordpress/ $*
