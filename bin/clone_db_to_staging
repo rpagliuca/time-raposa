@@ -1,0 +1,1 @@
+heroku pg:copy timeraposa-prod::DATABASE DATABASE --app timeraposa-staging --confirm timeraposa-staging
