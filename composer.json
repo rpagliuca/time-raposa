@@ -15,14 +15,5 @@
         }
     ],
     "minimum-stability": "dev",
-    "prefer-stable" : true,
-    "extra": {
-        "heroku": {
-            "document-root": "src/wordpress",
-            "index-document": "src/wordpress/index.php",
-            "php-config": [
-                "date.timezone=America/Sao_Paulo"
-            ]
-        }
-    }
+    "prefer-stable" : true
 }
