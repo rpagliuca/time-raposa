@@ -2,10 +2,10 @@
     "name": "timeraposa/blog",
     "type": "project",
     "require": {
-        "php": "^7"
+        "php": "^5.6"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.4"
+        "phpunit/phpunit": "^5.7"
     },
     "license": "MIT",
     "authors": [
@@ -15,5 +15,14 @@
         }
     ],
     "minimum-stability": "dev",
-    "prefer-stable" : true
+    "prefer-stable" : true,
+    "extra": {
+        "heroku": {
+            "document-root": "src/wordpress",
+            "index-document": "index.php",
+            "php-config": [
+                "date.timezone=America/Sao_Paulo"
+            ]
+        }
+    }
 }
