@@ -19,7 +19,7 @@
     "extra": {
         "heroku": {
             "document-root": "src/wordpress",
-            "index-document": "index.php",
+            "index-document": "src/wordpress/index.php",
             "php-config": [
                 "date.timezone=America/Sao_Paulo"
             ]
