@@ -664,5 +664,5 @@ SQL
         } catch (Exception $e) {
             error_log($e->getTraceAsString());
         }
-	    error_log($log);
+	    error_log($message);
     }
