@@ -146,7 +146,7 @@
 				$ignore = strpos($err, 'relation "'.$table_prefix);
 			}
 			if( ! $ignore )
-				error_log('['.microtime(true)."] Error running :\n$initial\n---- converted to ----\n$sql\n----> $err\n---------------------\n", 3, PG4WP_LOG.'pg4wp_errors.log');
+				error_log("[pg4wp] Error running :\n$initial\n---- converted to ----\n$sql\n----> $err\n---------------------\n");
 		}
 		return $GLOBALS['pg4wp_result'];
 	}
@@ -185,15 +185,15 @@
 				$data = pg_fetch_result($res, 0, 0);
 			elseif( PG4WP_DEBUG || PG4WP_ERROR_LOG)
 			{
-				$log = '['.microtime(true)."] wpsql_insert_id() was called with '$table' and '$ins_field'".
+				$log = "[pg4wp] wpsql_insert_id() was called with '$table' and '$ins_field'".
 						" and returned the error:\n".pg_last_error().
 						"\nFor the query:\n".$sql.
 						"\nThe latest INSERT query was :\n'$lastq'\n";
-				error_log( $log, 3, PG4WP_LOG.'pg4wp_errors.log');
+				error_log($log);
 			}
 		}
 		if( PG4WP_DEBUG && $sql)
-			error_log( '['.microtime(true)."] Getting inserted ID for '$table' ('$ins_field') : $sql => $data\n", 3, PG4WP_LOG.'pg4wp_insertid.log');
+			error_log("[pg4wp] Getting inserted ID for '$table' ('$ins_field') : $sql => $data\n");
 			
 		return $data;
 	}
@@ -233,7 +233,7 @@
 				$sql = str_replace('SQL_CALC_FOUND_ROWS', '', $sql);
 				$GLOBALS['pg4wp_numrows_query'] = $sql;
 				if( PG4WP_DEBUG)
-					error_log( '['.microtime(true)."] Number of rows required for :\n$sql\n---------------------\n", 3, PG4WP_LOG.'pg4wp_NUMROWS.log');
+					error_log("[pg4wp] Number of rows required for :\n$sql\n---------------------\n");
 			}
 			elseif( false !== strpos($sql, 'FOUND_ROWS()'))
 			{
@@ -601,9 +601,9 @@
 		if( PG4WP_DEBUG)
 		{
 			if( $initial != $sql)
-				error_log( '['.microtime(true)."] Converting :\n$initial\n---- to ----\n$sql\n---------------------\n", 3, PG4WP_LOG.'pg4wp_'.$logto.'.log');
+				error_log("[pg4wp] Converting :\n$initial\n---- to ----\n$sql\n---------------------\n");
 			else
-				error_log( '['.microtime(true)."] $sql\n---------------------\n", 3, PG4WP_LOG.'pg4wp_unmodified.log');
+				error_log("[pg4wp] $sql\n---------------------\n");
 		}
 		return $sql;
 	}
@@ -633,7 +633,7 @@ SQL
 		if( (PG4WP_DEBUG || PG4WP_LOG_ERRORS) && $result === false )
 		{
 			$err = pg_last_error();
-			error_log('['.microtime(true)."] Error creating MySQL-compatible field function: $err\n", 3, PG4WP_LOG.'pg4wp_errors.log');
+			error_log("[pg4wp] Error creating MySQL-compatible field function: $err\n");
 		}
 	}
 
