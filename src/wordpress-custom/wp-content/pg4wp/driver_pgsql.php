@@ -146,7 +146,7 @@
 				$ignore = strpos($err, 'relation "'.$table_prefix);
 			}
 			if( ! $ignore )
-				error_log("[pg4wp] Error running :\n$initial\n---- converted to ----\n$sql\n----> $err\n---------------------\n");
+				pgsql_log("[pg4wp] Error running :\n$initial\n---- converted to ----\n$sql\n----> $err\n---------------------\n");
 		}
 		return $GLOBALS['pg4wp_result'];
 	}
@@ -189,11 +189,11 @@
 						" and returned the error:\n".pg_last_error().
 						"\nFor the query:\n".$sql.
 						"\nThe latest INSERT query was :\n'$lastq'\n";
-				error_log($log);
+                pgsql_log($log);
 			}
 		}
 		if( PG4WP_DEBUG && $sql)
-			error_log("[pg4wp] Getting inserted ID for '$table' ('$ins_field') : $sql => $data\n");
+			pgsql_log("[pg4wp] Getting inserted ID for '$table' ('$ins_field') : $sql => $data\n");
 			
 		return $data;
 	}
@@ -233,7 +233,7 @@
 				$sql = str_replace('SQL_CALC_FOUND_ROWS', '', $sql);
 				$GLOBALS['pg4wp_numrows_query'] = $sql;
 				if( PG4WP_DEBUG)
-					error_log("[pg4wp] Number of rows required for :\n$sql\n---------------------\n");
+					pgsql_log("[pg4wp] Number of rows required for :\n$sql\n---------------------\n");
 			}
 			elseif( false !== strpos($sql, 'FOUND_ROWS()'))
 			{
@@ -601,9 +601,9 @@
 		if( PG4WP_DEBUG)
 		{
 			if( $initial != $sql)
-				error_log("[pg4wp] Converting :\n$initial\n---- to ----\n$sql\n---------------------\n");
+				pgsql_log("[pg4wp] Converting :\n$initial\n---- to ----\n$sql\n---------------------\n");
 			else
-				error_log("[pg4wp] $sql\n---------------------\n");
+				pgsql_log("[pg4wp] $sql\n---------------------\n");
 		}
 		return $sql;
 	}
@@ -633,7 +633,7 @@ SQL
 		if( (PG4WP_DEBUG || PG4WP_LOG_ERRORS) && $result === false )
 		{
 			$err = pg_last_error();
-			error_log("[pg4wp] Error creating MySQL-compatible field function: $err\n");
+			pgsql_log("[pg4wp] Error creating MySQL-compatible field function: $err\n");
 		}
 	}
 
@@ -656,3 +656,13 @@ SQL
 		$result_status = pg_result_status($result);
 		return pg_result_error_field($result_status, PGSQL_DIAG_SQLSTATE);
 	}
+
+    function pgsql_log($message) {
+        try {
+            /* Dummy exception just to catch trace as string */
+            throw new Exception('dummy');
+        } catch (Exception $e) {
+            error_log($e->getTraceAsString());
+        }
+	    error_log($log);
+    }
